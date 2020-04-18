@@ -1,6 +1,7 @@
 const models = require('../models');
 const AdminBro = require('admin-bro');
 const AdminBroSequelize = require('admin-bro-sequelizejs');
+const argon2 = require('argon2');
 
 AdminBro.registerAdapter(AdminBroSequelize);
 
