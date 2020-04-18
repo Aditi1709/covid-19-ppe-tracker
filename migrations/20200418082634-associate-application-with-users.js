@@ -10,6 +10,13 @@ module.exports = {
       }
     );
     await queryInterface.addColumn(
+      'Users',
+      'verified',
+      {
+        type:Sequelize.BOOLEAN
+      }
+    );
+    await queryInterface.addColumn(
       'Availabilities',
       'UserId',
       {
@@ -62,6 +69,10 @@ module.exports = {
     await queryInterface.removeColumn(
       'Availabilities',
       'UserId'
+    );
+    await queryInterface.removeColumn(
+      'Users',
+      'verified'
     );
     return queryInterface.removeColumn(
       'Users',
